@@ -143,8 +143,22 @@ const data=subjects.filter(s=>(current==="Semua"||s[2]===current)&&s[0].toLowerC
 document.getElementById("subjects").innerHTML=data.map((s)=>`<div class="card"><div class="subject-icon">${s[1]}</div><h3>${s[0]}</h3><p>${s[3]}</p><span class="tag">${s[2]}</span><br><button class="btn" style="margin-top:13px" onclick="subject('${s[0]}')">📚 Buka Koleksi</button></div>`).join("")||'<p>Tidak ada mata pelajaran yang ditemukan.</p>';
 }
 function subject(name){
-document.getElementById("modalContent").innerHTML=`<div class="eyebrow">Koleksi mata pelajaran</div><h2>${name}</h2><p style="color:#68788a">Halaman ini siap diisi dengan buku, modul, materi PDF, atau link Google Drive untuk mata pelajaran <b>${name}</b>.</p><button class="btn" onclick="closeModal()">Tutup</button>`;
-document.getElementById("modal").style.display="block";
+    document.getElementById("modalContent").innerHTML=`
+        <div class="eyebrow">Koleksi mata pelajaran</div>
+        <h2>${name}</h2>
+
+        <div style="background:#f5f8fb;border-radius:14px;padding:20px;margin:20px 0;text-align:center">
+            <div style="font-size:40px">📚</div>
+            <h3>Belum ada e-book</h3>
+            <p style="color:#68788a">
+                Koleksi buku untuk mata pelajaran ${name} akan tersedia di sini.
+            </p>
+        </div>
+
+        <button class="btn" onclick="closeModal()">Tutup</button>
+    `;
+    document.getElementById("modal").style.display="block";
+}
 }
 function story(i){
 let s=stories[i];
