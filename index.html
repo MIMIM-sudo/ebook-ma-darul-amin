@@ -11,7 +11,12 @@ a{text-decoration:none;color:inherit}button{font:inherit}
 .top{background:linear-gradient(135deg,#0e304b,#176b9f);color:white;padding:10px 6%;font-size:13px}
 header{position:sticky;top:0;z-index:50;background:#ffffffee;backdrop-filter:blur(12px);border-bottom:1px solid #e8edf2}
 .nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:15px 5%;gap:20px}
-.brand{display:flex;align-items:center;gap:12px}.logo{width:45px;height:45px;border-radius:13px;background:linear-gradient(145deg,var(--gold),#f2d77a);display:grid;place-items:center;font-size:24px;box-shadow:0 5px 15px #d8a92840}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:45px;height:45px;border-radius:13px;background:linear-gradient(145deg,var(--gold),#f2d77a);display:grid;place-items:center;font-size:24px;box-shadow:0 5px 15px #d8a92840}.logo-img{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+    border-radius:50%;
+}
 .brand b{display:block;color:var(--navy);font-size:16px}.brand span{font-size:11px;color:var(--muted)}
 .navlinks{display:flex;gap:8px;align-items:center}.navlinks button{border:0;background:none;padding:9px 11px;color:#42566a;font-weight:700;cursor:pointer;border-radius:9px}.navlinks button:hover{background:#edf5fa;color:var(--blue)}
 .menu{display:none;border:0;background:none;font-size:24px}
@@ -39,7 +44,7 @@ footer{background:#0c2c43;color:#dceaf3;padding:35px 6%;text-align:center}footer
 <div class="top">MA DARUL AMIN PALANGKA RAYA • E-LIBRARY • Tahun Ajaran 2026/2027</div>
 <header>
 <div class="nav">
-<div class="brand"><div class="logo">📚</div><div><b>Darul Amin E-Library</b><span>Perpustakaan Digital Madrasah Aliyah</span></div></div>
+<div class="brand"><img src="LOGO_MADA.jpg" class="logo-img" alt="Logo Darul Amin"><div><b>Darul Amin E-Library</b><span>Perpustakaan Digital Madrasah Aliyah</span></div></div>
 <button class="menu" onclick="toggleNav()">☰</button>
 <div class="navlinks" id="navlinks">
 <button onclick="go('beranda')">Beranda</button><button onclick="go('mapel')">Mata Pelajaran</button><button onclick="go('cerita')">Buku Cerita</button><button onclick="go('tentang')">Tentang</button>
